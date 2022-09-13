@@ -1,0 +1,194 @@
+// new person.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+/*
+9 / 13 / 22
+Taiquan Evans
+*/
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Gamestructer
+{
+public:
+
+private
+};
+
+class character
+{
+
+    public:
+
+    bool name;
+
+
+};
+
+
+
+class Stats
+{
+
+    public:
+    
+
+
+    Private:
+    int Hp;
+    int spd;
+    int str;
+
+};
+
+
+class rogue : public character, public Stats
+{
+
+    public:
+
+        void name()
+        {
+            cout << "I am the rogue..." << endl;
+        }
+
+        void stats()
+        {
+            
+            Hp = 10;
+
+            spd = 12;
+
+            str = 6;
+
+            cout << "total hp is " << hp << endl;
+
+            cout << "speed is " << sd << endl;
+
+            cout << "strength is " << str << endl;
+
+        }
+
+        void attack()
+        {
+            cout << "throwing stars!";
+
+        }
+
+        void talk()
+        {
+            cout << "moving by the night.." << endl;
+        }
+ 
+        private
+        int Hp;
+        int spd;
+        int str;
+        
+};
+
+class Pirate : public character
+{
+
+    public:
+
+        void name()
+        {
+            cout << "arg, I be the pirate! set sail!" << endl;
+        }
+
+        void stats()
+        {
+            const int hp = 8;
+
+            int sd = 11;
+
+            int str = 10;
+
+            cout << "total hp is " << hp << endl;
+
+            cout << "speed is " << sd << endl;
+
+            cout << "strength is " << str << endl;
+
+        }
+
+        void attack()
+        {
+            cout << "fire at will! hahaha!!";
+        }
+
+
+        void talk()
+        {
+            cout << "take them for everthing they got!" << endl;
+        }
+
+
+};
+
+int main()
+{
+
+    string input;
+
+    string ansr;
+
+    string ansr1;
+
+    rogue Rge1;
+
+    Pirate PRT1;
+
+    cout << "Welcome adventure to zaria! a mystries and dangerous world!" << endl;
+    
+    cout << "Please, chose your character!" << endl;
+
+    cout << "rogue" << endl;
+
+    cout << "Pirate" << endl;
+    cin >> input;
+
+    if (input == "rogue")
+    {
+        Rge1.name();
+
+        cout << "do you want to look at stats?" << endl;
+        cin >> ansr;
+        if (ansr == "yes")
+        {
+            Rge1.stats();
+        }
+
+        cout << "do you want to test skills?" << endl;
+        cin >> ansr;
+        if (ansr == "yes")
+        {
+            Rge1.attack();
+        }
+
+    }
+    else if (input == "pirate")
+    {
+        PRT1.name();
+
+        cout << "do you want to look at stats?" << endl;
+        cin >> ansr;
+        if (ansr == "yes")
+        {
+            PRT1.stats();
+        }
+
+        cout << "do you want to test skills?" << endl;
+        cin >> ansr;
+        if (ansr == "yes")
+        {
+            PRT1.attack();
+        }
+    }
+
+    cout << " lets begin your adventure as a " << input << "!" << endl;
+
+    return 0;
+};
