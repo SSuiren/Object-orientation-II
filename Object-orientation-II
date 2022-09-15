@@ -9,17 +9,11 @@ Taiquan Evans
 #include <string>
 using namespace std;
 
-class Gamestructer
-{
-public:
-
-private
-};
 
 class character
 {
 
-    public:
+public:
 
     bool name;
 
@@ -31,11 +25,11 @@ class character
 class Stats
 {
 
-    public:
-    
+public:
 
 
-    Private:
+
+private:
     int Hp;
     int spd;
     int str;
@@ -46,85 +40,107 @@ class Stats
 class rogue : public character, public Stats
 {
 
-    public:
-
-        void name()
-        {
-            cout << "I am the rogue..." << endl;
-        }
-
-        void stats()
-        {
-            
-            Hp = 10;
-
-            spd = 12;
-
-            str = 6;
-
-            cout << "total hp is " << hp << endl;
-
-            cout << "speed is " << sd << endl;
-
-            cout << "strength is " << str << endl;
-
-        }
-
-        void attack()
-        {
-            cout << "throwing stars!";
-
-        }
-
-        void talk()
-        {
-            cout << "moving by the night.." << endl;
-        }
- 
-        private
-        int Hp;
-        int spd;
-        int str;
+public:
+    //setter for hp
+    void setHp_check()
+    {
         
+    }
+
+
+    void name()
+    {
+        cout << "I am the rogue..." << endl;
+    }
+
+    void stats()
+    {
+
+        Hp = 10;
+
+        spd = 12;
+
+        str = 6;
+
+        cout << "total hp is " << Hp << endl;
+
+        cout << "speed is " << spd << endl;
+
+        cout << "strength is " << str << endl;
+
+    }
+
+    void attack()
+    {
+        cout << "throwing stars!";
+
+    }
+
+    void talk()
+    {
+        cout << "moving by the night.." << endl;
+    }
+
+    void damaged()
+    {
+        cout << "hahaha, i'll be paying you back for that one!" << endl;
+        -Hp;
+    }
+
+private:
+    int Hp;
+    int spd;
+    int str;
+
 };
 
 class Pirate : public character
 {
 
-    public:
+public:
 
-        void name()
-        {
-            cout << "arg, I be the pirate! set sail!" << endl;
-        }
+    void name()
+    {
+        cout << "arg, I be the pirate! set sail!" << endl;
+    }
 
-        void stats()
-        {
-            const int hp = 8;
+    void stats()
+    {
+         Hp = 8;
 
-            int sd = 11;
+         spd = 11;
 
-            int str = 10;
+         str = 10;
 
-            cout << "total hp is " << hp << endl;
+        cout << "total hp is " << Hp << endl;
 
-            cout << "speed is " << sd << endl;
+        cout << "speed is " << spd << endl;
 
-            cout << "strength is " << str << endl;
+        cout << "strength is " << str << endl;
 
-        }
+    }
 
-        void attack()
-        {
-            cout << "fire at will! hahaha!!";
-        }
+    void attack()
+    {
+        cout << "fire at will! hahaha!!";
+    }
 
 
-        void talk()
-        {
-            cout << "take them for everthing they got!" << endl;
-        }
+    void talk()
+    {
+        cout << "take them for everthing they got!" << endl;
+    }
 
+    void damaged()
+    {
+        cout << "hahaha, i'll be paying you back for that one!" << endl;
+        -Hp;
+    }
+
+private:
+    int Hp;
+    int spd;
+    int str;
 
 };
 
@@ -142,7 +158,7 @@ int main()
     Pirate PRT1;
 
     cout << "Welcome adventure to zaria! a mystries and dangerous world!" << endl;
-    
+
     cout << "Please, chose your character!" << endl;
 
     cout << "rogue" << endl;
